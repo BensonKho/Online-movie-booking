@@ -1,0 +1,277 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  --background-color: hsl(180, 20%, 90%);
+
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+  min-height: 100vh;
+  /*padding: 2rem;*/
+
+  color: hsla(0, 0%, 0%, .6);
+  background: var(--background-color);
+  text-align: center;
+}
+
+h1 {
+  font-size: 3.2rem;
+  padding-top: 2rem;
+}
+
+h1+p {
+  font-size: 1.8rem;
+  padding: 2rem 0 3rem;
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrap {
+  margin: 2rem;
+
+  transform-style: preserve-3d;
+  transform: perspective(100rem);
+
+  cursor: pointer;
+}
+
+.containerr {
+  --rX: 0;
+  --rY: 0;
+  --bX: 50%;
+  --bY: 80%;
+
+  width: 20rem;
+  height: 24rem;
+  border: 1px solid var(--background-color);
+  border-radius: 1.6rem;
+  padding: 4rem;
+
+  display: flex;
+  align-items: flex-end;
+
+  position: relative;
+  transform: rotateX(calc(var(--rX) * 1deg)) rotateY(calc(var(--rY) * 1deg));
+
+  background: linear-gradient(hsla(0, 0%, 100%, .1), hsla(0, 0%, 100%, .1)), url(https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fimages6.fanpop.com%2Fimage%2Fphotos%2F34100000%2FFast-and-Furious-6-2013-Poster-HQ-Vin-Diesel-fast-and-furious-34129656-1685-2500.jpg&f=1&nofb=1);
+  background-position: var(--bX) var(--bY);
+  background-size: 40rem auto;
+  box-shadow: 0 0 3rem .5rem hsla(0, 0%, 0%, .2);
+
+  transition: transform .6s 1s;
+}
+
+.containerr::before,
+.containerr::after {
+  content: "";
+
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid #fff;
+
+  position: absolute;
+  z-index: 2;
+
+  opacity: .3;
+  transition: .3s;
+}
+
+.containerr::before {
+  top: 2rem;
+  right: 2rem;
+
+  border-bottom-width: 0;
+  border-left-width: 0;
+}
+
+.containerr::after {
+  bottom: 2rem;
+  left: 2rem;
+
+  border-top-width: 0;
+  border-right-width: 0;
+}
+
+.container--active {
+  transition: none;
+}
+
+/*.container--2 {
+  filter: hue-rotate(80deg) saturate(140%);
+}
+
+.container--3 {
+  filter: hue-rotate(160deg) saturate(140%);
+}*/
+
+.containerr p {
+  color: hsla(0, 0%, 100%, .6);
+  font-size: 2.2rem;
+}
+
+.one{
+  background: linear-gradient(hsla(0, 0%, 100%, .1), hsla(0, 0%, 100%, .1)), url(https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fgetwallpapers.com%2Fwallpaper%2Ffull%2Ff%2F1%2Fc%2F699538-fast-and-furious-wallpaper-1920x1200-ipad-retina.jpg&f=1&nofb=1);
+  background-position: var(--bX) var(--bY);
+  background-size: 40rem auto;
+  box-shadow: 0 0 3rem .5rem hsla(0, 0%, 0%, .2);
+}
+
+.two{
+  background: linear-gradient(hsla(0, 0%, 100%, .1), hsla(0, 0%, 100%, .1)), url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ffanart.tv%2Ffanart%2Fmovies%2F278927%2Fmovieposter%2Fthe-jungle-book-55fe3c92a9e1d.jpg&f=1&nofb=1);
+  background-position: var(--bX) var(--bY);
+  background-size: 40rem auto;
+  box-shadow: 0 0 3rem .5rem hsla(0, 0%, 0%, .2);
+}
+
+.three{
+  background: linear-gradient(hsla(0, 0%, 100%, .1), hsla(0, 0%, 100%, .1)), url(https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fimages.contactmusic.com%2Fimages%2Ffeature-images%2Fedge-of-tomorrow-tom-cruise-02-636-380.jpg&f=1&nofb=1);
+  background-position: var(--bX) var(--bY);
+  background-size: 40rem auto;
+  box-shadow: 0 0 3rem .5rem hsla(0, 0%, 0%, .2);
+}
+
+.four{
+  background: linear-gradient(hsla(0, 0%, 100%, .1), hsla(0, 0%, 100%, .1)), url(https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.followingthenerd.com%2Fsite%2Fwp-content%2Fuploads%2Fmatrix.jpg&f=1&nofb=1);
+  background-position: var(--bX) var(--bY);
+  background-size: 40rem auto;
+  box-shadow: 0 0 3rem .5rem hsla(0, 0%, 0%, .2);
+}
+.five{
+  background: linear-gradient(hsla(0, 0%, 100%, .1), hsla(0, 0%, 100%, .1)), url(https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fassets1.ignimgs.com%2F2018%2F01%2F22%2Fjohnwick-blogroll-1516657690730_1280w.jpg&f=1&nofb=1);
+  background-position: var(--bX) var(--bY);
+  background-size: 40rem auto;
+  box-shadow: 0 0 3rem .5rem hsla(0, 0%, 0%, .2);
+}
+.six{
+  background: linear-gradient(hsla(0, 0%, 100%, .1), hsla(0, 0%, 100%, .1)), url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ffanart.tv%2Ffanart%2Fmovies%2F427641%2Fmovieposter%2Frampage-5ab0a4579f30c.jpg&f=1&nofb=1);
+  background-position: var(--bX) var(--bY);
+  background-size: 40rem auto;
+  box-shadow: 0 0 3rem .5rem hsla(0, 0%, 0%, .2);
+}
+.seven{
+  background: linear-gradient(hsla(0, 0%, 100%, .1), hsla(0, 0%, 100%, .1)), url(https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fdailytrojan.com%2Fwp-content%2Fuploads%2F2010%2F02%2FShutter-Island-3.jpg&f=1&nofb=1);
+  background-position: var(--bX) var(--bY);
+  background-size: 40rem auto;
+  box-shadow: 0 0 3rem .5rem hsla(0, 0%, 0%, .2);
+}
+.eight{
+  background: linear-gradient(hsla(0, 0%, 100%, .1), hsla(0, 0%, 100%, .1)), url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthemoviemylife.files.wordpress.com%2F2014%2F12%2Fscreen-shot-2014-12-18-at-13-05-03.png&f=1&nofb=1);
+  background-position: var(--bX) var(--bY);
+  background-size: 40rem auto;
+  box-shadow: 0 0 3rem .5rem hsla(0, 0%, 0%, .2);
+}
+.nine{
+  background: linear-gradient(hsla(0, 0%, 100%, .1), hsla(0, 0%, 100%, .1)), url(https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fautumnseyes.com%2Fwp-content%2Fuploads%2F2017%2F02%2Fget-out-horror-movie.jpg&f=1&nofb=1);
+  background-position: var(--bX) var(--bY);
+  background-size: 40rem auto;
+  box-shadow: 0 0 3rem .5rem hsla(0, 0%, 0%, .2);
+}
+.ten{
+  background: linear-gradient(hsla(0, 0%, 100%, .1), hsla(0, 0%, 100%, .1)), url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fanimationfascination.files.wordpress.com%2F2014%2F07%2Fbig-hero-6-character-rollout-hiro.jpg&f=1&nofb=1);
+  background-position: var(--bX) var(--bY);
+  background-size: 40rem auto;
+  box-shadow: 0 0 3rem .5rem hsla(0, 0%, 0%, .2);
+}
+.eleven{
+  background: linear-gradient(hsla(0, 0%, 100%, .1), hsla(0, 0%, 100%, .1)), url(https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2F1.bp.blogspot.com%2F_WkKZJVG5wTk%2FTRnpWmtX7sI%2FAAAAAAAC4ns%2F6foJ-yBOhxQ%2Fs1600%2Fco7.jpg&f=1&nofb=1);
+  background-position: var(--bX) var(--bY);
+  background-size: 40rem auto;
+  box-shadow: 0 0 3rem .5rem hsla(0, 0%, 0%, .2);
+}
+.twelve{
+  background: linear-gradient(hsla(0, 0%, 100%, .1), hsla(0, 0%, 100%, .1)), url(https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Feskipaper.com%2Fimages%2Finterstellar-7.jpg&f=1&nofb=1);
+  background-position: var(--bX) var(--bY);
+  background-size: 40rem auto;
+  box-shadow: 0 0 3rem .5rem hsla(0, 0%, 0%, .2);
+}
+.thirteen{
+  background: linear-gradient(hsla(0, 0%, 100%, .1), hsla(0, 0%, 100%, .1)), url(https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fstartuphook.com%2Fwp-content%2Fuploads%2F2015%2F03%2Fmillionaire.jpg&f=1&nofb=1);
+  background-position: var(--bX) var(--bY);
+  background-size: 40rem auto;
+  box-shadow: 0 0 3rem .5rem hsla(0, 0%, 0%, .2);
+}
+.fourteen{
+  background: linear-gradient(hsla(0, 0%, 100%, .1), hsla(0, 0%, 100%, .1)), url(https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fmedia1.santabanta.com%2Ffull1%2FHollywood%2520Movies%2FMission%2520Impossible%2520Rogue%2520Nation%2Fmission-impossible-rogue-nation-0a.jpg&f=1&nofb=1);
+  background-position: var(--bX) var(--bY);
+  background-size: 40rem auto;
+  box-shadow: 0 0 3rem .5rem hsla(0, 0%, 0%, .2);
+}
+.fifteen{
+  background: linear-gradient(hsla(0, 0%, 100%, .1), hsla(0, 0%, 100%, .1)), url(https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.dumblittleman.com%2Fwp-content%2Fuploads%2F2014%2F04%2FJames-Bond1.jpg&f=1&nofb=1);
+  background-position: var(--bX) var(--bY);
+  background-size: 40rem auto;
+  box-shadow: 0 0 3rem .5rem hsla(0, 0%, 0%, .2);
+}
+.sixteen{
+  background: linear-gradient(hsla(0, 0%, 100%, .1), hsla(0, 0%, 100%, .1)), url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn2us.denofgeek.com%2Fsites%2Fdenofgeekus%2Ffiles%2F2017%2F12%2Fit.jpg&f=1&nofb=1);
+  background-position: var(--bX) var(--bY);
+  background-size: 40rem auto;
+  box-shadow: 0 0 3rem .5rem hsla(0, 0%, 0%, .2);
+}
+.seventeen{
+  background: linear-gradient(hsla(0, 0%, 100%, .1), hsla(0, 0%, 100%, .1)), url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpapers.filmibeat.com%2Fph-1024x768%2F2019%2F04%2Favengers-endgame_155616821740.jpg&f=1&nofb=1);
+  background-position: var(--bX) var(--bY);
+  background-size: 40rem auto;
+  box-shadow: 0 0 3rem .5rem hsla(0, 0%, 0%, .2);
+}
+.eighteen{
+  background: linear-gradient(hsla(0, 0%, 100%, .1), hsla(0, 0%, 100%, .1)), url(https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.hdwallpaperslife.com%2Fwp-content%2Fuploads%2F2018%2F10%2Ftom_hardy_as_venom_4k_8k.jpg&f=1&nofb=1);
+  background-position: var(--bX) var(--bY);
+  background-size: 40rem auto;
+  box-shadow: 0 0 3rem .5rem hsla(0, 0%, 0%, .2);
+}
+.nineteen{
+  background: linear-gradient(hsla(0, 0%, 100%, .1), hsla(0, 0%, 100%, .1)), url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ffanart.tv%2Ffanart%2Fmovies%2F354912%2Fmovieposter%2Fcoco-5a01bc688c32f.jpg&f=1&nofb=1);
+  background-position: var(--bX) var(--bY);
+  background-size: 40rem auto;
+  box-shadow: 0 0 3rem .5rem hsla(0, 0%, 0%, .2);
+}
+.twenty{
+  background: linear-gradient(hsla(0, 0%, 100%, .1), hsla(0, 0%, 100%, .1)), url(https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2F1.bp.blogspot.com%2F-7iK0uA1pp2s%2FVJVjpAq-5gI%2FAAAAAAAAAB0%2FNqRkr-Nx5kM%2Fs1600%2FCinderella%2BMovie%2B2015.jpg&f=1&nofb=1);
+  background-position: var(--bX) var(--bY);
+  background-size: 40rem auto;
+  box-shadow: 0 0 3rem .5rem hsla(0, 0%, 0%, .2);
+}
+.twentyone{
+  background: linear-gradient(hsla(0, 0%, 100%, .1), hsla(0, 0%, 100%, .1)), url(https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.hdwallpapers.in%2Fdownload%2Fleonardo_dicaprio_in_inception-1366x768.jpg&f=1&nofb=1);
+  background-position: var(--bX) var(--bY);
+  background-size: 40rem auto;
+  box-shadow: 0 0 3rem .5rem hsla(0, 0%, 0%, .2);
+}
+.twentytwo{
+  background: linear-gradient(hsla(0, 0%, 100%, .1), hsla(0, 0%, 100%, .1)), url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.screengeek.net%2Fwp-content%2Fuploads%2F2019%2F01%2Fspider-man-far-from-home-trailer.jpg&f=1&nofb=1);
+  background-position: var(--bX) var(--bY);
+  background-size: 40rem auto;
+  box-shadow: 0 0 3rem .5rem hsla(0, 0%, 0%, .2);
+}
+.twentythree{
+  background: linear-gradient(hsla(0, 0%, 100%, .1), hsla(0, 0%, 100%, .1)), url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic3.srcdn.com%2Fwordpress%2Fwp-content%2Fuploads%2F2019%2F10%2FEl-Camino-Breaking-Bad-Movie-reviews.jpg&f=1&nofb=1);
+  background-position: var(--bX) var(--bY);
+  background-size: 40rem auto;
+  box-shadow: 0 0 3rem .5rem hsla(0, 0%, 0%, .2);
+}
+.twentyfour{
+  background: linear-gradient(hsla(0, 0%, 100%, .1), hsla(0, 0%, 100%, .1)), url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthefailedcritic.files.wordpress.com%2F2014%2F12%2Fgone-girl.png&f=1&nofb=1);
+  background-position: var(--bX) var(--bY);
+  background-size: 40rem auto;
+  box-shadow: 0 0 3rem .5rem hsla(0, 0%, 0%, .2);
+}
+.wrap:hover .containerr::before,
+.wrap:hover .containerr::after {
+  width: calc(100% - 4rem);
+  height: calc(100% - 4rem);
+}

@@ -1,0 +1,82 @@
+     
+<html>
+        <head>
+          <title></title>
+          <link rel="stylesheet" type="text/css" href="../homeStylesheet.css">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+          <link rel="stylesheet" type="text/css" href="../details.css">
+          <style>
+            body{
+              background-image: url(https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.hdwallpapers.in%2Fwalls%2Flight_blaze_hd_1080p-HD.jpg&f=1&nofb=1);
+              background-size: 100% 100%;
+            }
+          </style>
+        
+        </head>
+        <body>
+        
+           <nav >
+            <div class="nav-wrapper">
+              <a href="#" class="brand-logo right">Cineplox</a>
+              <ul id="nav-mobile" class="left hide-on-med-and-down">
+                <li><a href="/">Home</a></li>
+                <li><a href="/home">Book Movies</a></li>
+                <li><a href="/login">Login</a></li>
+                
+              </ul>
+            </div>
+          </nav>
+        
+        
+        <div class="container cc" align="center">
+          <div class="row">    
+            <div class="col-xs-12">
+        
+              <div class="card">                
+        
+                <div class="card-modal"><h3><%= movie[0].movie_name %></h3></div>
+                
+                <div class="card-info">
+                  
+                  <div class="name">
+                    <p><b>RATING: </b><%= movie[0].Rating %></p> 
+                  </div>
+                  
+                  <div class="content">
+                    <p><b>GENRE: </b><%= movie[0].Genre %></p>
+                    <p><b>CAST: </b><%= movie[0].Actor %></p>
+                  </div>
+                </div>
+              </div>    
+            </div>
+          </div>
+        </div>
+        
+        <div class="container bg">
+        <h3>NOW SHOWING</h3>
+        <table class="rwd-table">
+          <tr>
+            <th>THEATRE</th>
+            <th>LOCATION</th>
+            <th>DATE</th>
+            <th>TIME</th>
+            <th>SEATS</th>
+            <th></th>
+          </tr>
+          <tr>
+                <% lists.forEach(function(list, index){%>
+                 <tr>
+                 <td><%= list.t_name %></td>
+                 <td><%= list.t_location %></td>>
+                     <td><%= list.date %></td>
+                     <td><%= list.time %></td>
+                     <td><%= list.seats %></td>
+                     <td><a href="/home/book/<%=list.show_id%>" class="btn btn-2">Book Now</a></td>
+                 </tr>
+             
+             <% }) %>
+                 </tr>
+        </table>
+        </div>
+        </body>
+        </html>

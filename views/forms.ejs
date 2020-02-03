@@ -1,0 +1,76 @@
+<html>
+        <head>
+          <title></title>
+          <link rel="stylesheet" type="text/css" href="/homeStylesheet.css">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+          <link rel="stylesheet" type="text/css" href="/form.css">
+          <style>
+            body{
+              background-image: url(https://previews.123rf.com/images/vinsalow/vinsalow1705/vinsalow170500024/78755850-grunge-texture-summer-colors-background-hd-photo-light-earth-concept.jpg);
+              background-size: 100% 100%;
+            }
+          </style>
+        
+        </head>
+        <body>
+        
+           <nav >
+            <div class="nav-wrapper">
+              <a href="#" class="brand-logo right">Cineplox</a>
+              <ul id="nav-mobile" class="left hide-on-med-and-down">
+                <li><a href="/">Home</a></li>
+                <li><a href="/home">Book Movies</a></li>
+                
+              </ul>
+            </div>
+          </nav>
+        
+          <div class="container">
+            <div class="scotch-tape"></div>
+            <h1 id="title">Personal details</h1>
+            <p id="description">Enter your details to continue booking</p>
+            <form action="/home/book/<%=uid%>" method="post" id="survey-form" class="survey-form">
+              <div class="basic-info">
+                <div class="form-item">
+                  <label class for="name" id="name-label" >* Name:</label>
+                  <input type="text" id="name" name="name" placeholder="Enter your name" value="" required>
+                </div>
+                <div class="form-item">
+                  <label for="email" id="email-label">* Email:</label>
+                  <input type="email" id="email" name="email" placeholder="Enter your Email" value="" required>
+                </div>
+                <div class="form-item">
+                  <label for="nnumber" id="number-label">* Age</label>
+                  <input type="number" id="number" name="age" value="" placeholder="Age" min="5" max="110" required>
+                </div>
+        
+              </div>
+            
+            <div class="form-item">
+                  <label for="nseat" id="seat-label">* Seats</label>
+                  <input type="number" id="seat" name="seat" value="" placeholder="Seats" min="1" max="60"  required>
+                </div>
+           
+            
+              <div class="form-item">
+                  <label for="nnumber" id="number-label">* Phone Number</label>
+                  <input type="number" id="number" name="phone" value="" placeholder="Phone" min="1000000000"  required>
+                </div>
+           
+                <div class="form-item">
+                <label for="dropdown">Select your payment method?</label>
+                <select id="dropdown" required>
+                  <option>CASH</option>
+                  <option>CREDIT CARD/DEBIT CARD</option>
+                  <option>ONLINE PAYMENT</option>
+                </select>
+              </div>
+              <button type="submit" class="btn btn-2">Book Now!</button></form>
+              <!-- <a href="/home/" class="btn btn-2">Book now</a> -->
+          </div>
+          <!-- <div class="fcc-sticker"></div> -->
+          <!-- <a href="https://codepen.io/trangtran/" target="_blank" class="signature"></a> -->
+        
+        
+        </body>
+        </html>

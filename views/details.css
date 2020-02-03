@@ -1,0 +1,611 @@
+@import "compass/css3";
+
+/* Libs */
+/*@import url("//fonts.googleapis.com/css?family=Lato:400,300,100");*/
+/*@import url("//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css");*/
+
+
+
+
+
+/* General */
+*{
+  box-sizing:border-box;  
+  outline:none;
+}
+
+
+body{
+  /*background: #bdc3c7 url("http://www.subirimagenes.com/imagedata.php?url=http://s2.subirimagenes.com/otros/9067576mar.jpg") 0 0 no-repeat;*/
+  background-size:cover 100%;  
+  color:#7f8c8d;
+  font-size:16px;
+  font-weight:300;
+  font-family:'Lato';
+  
+  height:100%;  
+  /*padding:20px 0;*/
+}
+
+/*
+a{
+  @include transition(all .100s ease-out);
+  color:#e74c3c;
+  
+  &:hover{
+    color:#4BD3F4;
+  }
+}
+*/
+
+
+
+
+/* Card */
+.card{
+  @include background-image(linear-gradient(to bottom, #fff 0%, #ecf0f1 100%));
+  @include box-shadow(0 3px 10px rgba(0,0,0,0.5));
+  
+  display:block;
+  position:relative;
+  padding:20px;
+}
+
+.card{
+  .card-modal{
+    @include transition(all .3s cubic-bezier(.19, 1, .22, 1));
+    @include border-radius(10px);
+    background-color:#bdc3c7;
+    color:white;
+
+    display:none;
+    position:absolute;
+    top:40px;
+    left:130px;
+    z-index:2;
+    padding:20px;
+    
+    &.active{      
+      left:140px;
+    }
+   
+    
+    &:before{
+      
+      content: "";
+            
+      border-style: solid;
+      border-width: 15px 15px 15px 0;
+      border-color: transparent #bdc3c7 transparent transparent;
+      
+      width: 0;
+      height: 0;
+      display:block;
+      
+      position:absolute;
+      top:20%;
+      left:-15px;
+    }
+  }
+}
+
+
+
+
+.card{
+  .card-info{    
+    margin-left:120px;    
+  }
+}
+
+
+.card{
+  .card-info{
+    .name{
+      
+      font-size:28px;
+      font-weight:100;        
+
+      display:inline-block;
+      vertical-align:top;
+      position:relative;            
+    }    
+  }
+}
+
+
+.card{
+  .card-info{
+
+    .social-network{
+      font-size:0;
+      
+      display:inline-block;
+      vertical-align:top;  
+      overflow:hidden;
+      margin-bottom:15px;
+        
+      @media(min-width:639px){
+        float:right;        
+        margin:5px 0 0;
+        }
+      
+      .icon{    
+        background-color:#bdc3c7;
+        border:0;
+        @include border-radius(50%);
+        
+        width:32px;
+        height:32px;
+        display:inline-block;
+        vertical-align:top;  
+        overflow:hidden;
+        position:relative;
+        
+        margin-left:10px;
+        
+        &:first-child{
+          margin:0;
+        }
+        
+        &:before{
+          @include transition(all .500s cubic-bezier(.19, 1, .22, 1)); 
+          @include border-radius(16px);
+          
+          content: "";
+          width:32px;
+          height:32px;
+          display:block;
+          position:absolute;
+          top:0;
+          left:0;
+          z-index:1;
+        }
+
+
+        i{          
+          color:white;
+          font-size:16px;
+          text-align:center;
+
+          width:100%;
+          height:100%;
+          position:absolute;    
+          top:50%;  
+          z-index:1;
+          margin-top:-7px;
+        }        
+      }
+    }
+  }
+}
+
+
+.card{
+  .card-info{
+    hr{
+      margin:0 0 15px;
+    }
+  }
+}
+
+.cc{
+ /* width: 1000px;*/
+  /*margin: 0 auto;*/
+  vertical-align: middle;
+}
+
+.bg{
+  background-color: white;
+}
+
+
+
+@import "compass/css3";
+
+// More practical CSS...
+// using mobile first method (IE8,7 requires respond.js polyfill https://github.com/scottjehl/Respond)
+
+$breakpoint-alpha: 480px; // adjust to your needs
+
+.rwd-table {
+  margin: 1em 0;
+  min-width: 300px; // adjust to your needs
+  
+  tr {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+    display: none; // for accessibility, use a visually hidden method here instead! Thanks, reddit!   
+  }
+  
+  td {
+    display: block; 
+    
+    &:first-child {
+      padding-top: .5em;
+    }
+    &:last-child {
+      padding-bottom: .5em;
+    }
+
+    &:before {
+      content: attr(data-th)": "; // who knew you could do this? The internet, that's who.
+      font-weight: bold;
+
+      // optional stuff to make it look nicer
+      width: 6.5em; // magic number :( adjust according to your own content
+      display: inline-block;
+      // end options
+      
+      @media (min-width: $breakpoint-alpha) {
+        display: none;
+      }
+    }
+  }
+  
+  th, td {
+    text-align: left;
+    
+    @media (min-width: $breakpoint-alpha) {
+      display: table-cell;
+      padding: .25em .5em;
+      
+      &:first-child {
+        padding-left: 0;
+      }
+      
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+
+  }
+  
+  
+}
+
+
+// presentational styling
+
+@import 'https://fonts.googleapis.com/css?family=Montserrat:300,400,700';
+
+body {
+  padding: 0 2em;
+  font-family: Montserrat, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  color: #444;
+  background: #eee;
+}
+
+h1 {
+  font-weight: normal;
+  letter-spacing: -1px;
+  color: #34495E;
+}
+
+.rwd-table {
+  background: #34495E;
+  color: #fff;
+  border-radius: .4em;
+  overflow: hidden;
+  tr {
+    border-color: lighten(#34495E, 10%);
+  }
+  th, td {
+    margin: .5em 1em;
+    @media (min-width: $breakpoint-alpha) { 
+      padding: 1em !important; 
+    }
+  }
+  th, td:before {
+    color: #dd5;
+  }
+}
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,900);
+
+//colors
+$red: #E1332D;
+$white: #fff;
+
+//base styles
+
+* {
+  box-sizing: inherit;
+  transition-property: all;
+  transition-duration: .6s;
+  transition-timing-function: ease;
+}
+
+html,
+body {
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background: $red;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+// Main wrap
+.buttons {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+
+// Button wrap
+.container { 
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1em;
+    text-align: center; 
+    
+    @media (min-width: 600px) {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+h1 {
+  color: $white;
+  font-size: 1.25em;
+  font-weight: 900;
+  margin: 0 0 2em;
+  
+  @media (min-width: 450px) {
+    font-size: 1.75em;
+  }
+  
+  @media (min-width: 760px) {
+    font-size: 3.25em;
+  }
+  
+  @media (min-width: 900px) {
+    font-size: 5.25em;
+    margin: 0 0 1em;
+  }
+}
+
+p {
+  color: $white;
+  font-size: 12px;
+  
+  @media(min-width: 600px) {
+    left: 50%;
+    position: absolute; 
+    transform: translate(-50%, 0);
+    top: 90%;
+  }
+  
+  @media(max-height: 500px) {
+    left: 0;
+    position: relative;
+    top: 0;
+    transform: translate(0, 0);
+  }
+  
+  a {
+    background: rgba($white, 0);
+    border-bottom: 1px solid;
+    color: $white;
+    line-height: 1.4;
+    padding: .25em;
+    text-decoration: none;
+    
+    &:hover {
+      background: rgba($white, 1);
+      color: $red;
+    }
+  }
+}
+//button styles
+
+
+//default button
+.btn {
+  color: #fff;
+  cursor: pointer;
+  // display: block;
+  font-size:16px;
+  font-weight: 400;
+  line-height: 45px;
+  margin: 0 0 2em;
+  max-width: 160px; 
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 100%; 
+  
+//   @media(min-width: 400px) {
+//     display: inline-block;
+//     margin-right: 2.5em;
+  
+//     &:nth-of-type(even) {
+//       margin-right: 0;
+//     }
+//   }
+  
+  @media(min-width: 600px) {
+      
+    margin: 0 1em 2em;
+  
+//     &:nth-of-type(even) {
+//       margin-right: 2.5em;
+//     }
+    
+//     &:nth-of-type(5) {
+//       margin-right: 0;
+//     }
+    
+  }
+  
+  &:hover { text-decoration: none; }
+  
+}
+
+/////////////////////////////////
+//button one
+///////////////////////////////
+.btn-1 {
+  background: darken($red, 1.5%);
+  font-weight: 100;
+  
+  svg {
+    height: 45px;
+    left: 0;
+    position: absolute;
+    top: 0; 
+    width: 100%; 
+  }
+  
+  rect {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 2;
+    stroke-dasharray: 422, 0;
+    transition: all 0.35s linear;
+  }
+}
+
+.btn-1:hover {
+  background: rgba($red, 0);
+  font-weight: 900;
+  letter-spacing: 1px;
+  
+  rect {
+    stroke-width: 5;
+    stroke-dasharray: 15, 310;
+    stroke-dashoffset: 48;
+    transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+}
+
+////////////////////////////
+//button two
+//////////////////////////
+.btn-2 {
+    letter-spacing: 0;
+}
+
+.btn-2:hover,
+.btn-2:active {
+  letter-spacing: 5px;
+}
+
+.btn-2:after,
+.btn-2:before {
+  backface-visibility: hidden;
+  border: 1px solid rgba(#fff, 0);
+  bottom: 0px;
+  content: " ";
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  transition: all 280ms ease-in-out;
+  width: 0;
+}
+
+.btn-2:hover:after,
+.btn-2:hover:before {
+  backface-visibility: hidden;
+  border-color: #fff;
+  transition: width 350ms ease-in-out;
+  width: 70%;
+}
+
+.btn-2:hover:before {
+  bottom: auto;
+  top: 0;
+  width: 70%;
+}
+
+/////////////////////////////
+//button -3 
+///////////////////////////
+.btn-3 {
+  background: lighten($red, 3%);  
+  border: 1px solid darken($red, 4%);
+  box-shadow: 0px 2px 0 darken($red, 5%), 2px 4px 6px darken($red, 2%);
+  font-weight: 900;
+  letter-spacing: 1px;
+  transition: all 150ms linear;
+}
+
+.btn-3:hover {
+  background: darken($red, 1.5%);
+  border: 1px solid rgba(#000, .05);
+  box-shadow: 1px 1px 2px rgba(#fff, .2);
+  color: lighten($red, 18%); 
+  text-decoration: none;
+  text-shadow: -1px -1px 0 darken($red, 9.5%);
+  transition: all 250ms linear;
+}
+
+/////////////////////////////
+//button-4 
+///////////////////////////
+.btn-4 {
+  border: 1px solid;
+  overflow: hidden;
+  position: relative;
+  
+  span {
+    z-index: 20;
+  }
+  
+  &:after {
+    background: #fff;
+    content: "";
+    height: 155px;
+    left: -75px;
+    opacity: .2;
+    position: absolute;
+    top: -50px;
+    transform: rotate(35deg);
+    transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+    width: 50px;
+    z-index: -10;
+  }
+}
+
+.btn-4:hover {
+  
+  &:after {
+    left: 120%;
+    transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+  }
+}
+
+/////////////////////////////
+//button-5 
+///////////////////////////
+.btn-5 {
+  border: 0 solid;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+  outline: 1px solid;
+  outline-color: rgba(255, 255, 255, .5);
+  outline-offset: 0px;
+  text-shadow: none;
+  transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+} 
+
+.btn-5:hover {
+  border: 1px solid;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
+  outline-color: rgba(255, 255, 255, 0);
+  outline-offset: 15px;
+  text-shadow: 1px 1px 2px #427388; 
+}
